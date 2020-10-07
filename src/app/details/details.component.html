@@ -1,1 +1,8 @@
-<p>details works!</p>
+<button class="btn btn-primary" (click) = "onToggleDetails()">Dispaly Details</button>
+
+<p *ngIf="showMessage">Secret Password = pass</p>
+<div
+  *ngFor="let item of log; let i = index"
+  [ngStyle]="{backgroundColor : i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{'white-text' : i >= 4}"
+>{{ item }}</div>
