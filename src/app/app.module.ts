@@ -9,7 +9,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { UsernameComponent } from './username/username.component';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details/details.component';
-
+import { CookpitComponent } from './cookpit/cookpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,8 @@ import { DetailsComponent } from './details/details.component';
     WarningAlertComponent,
     UsernameComponent,
     DetailsComponent,
+    CookpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
