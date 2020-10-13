@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details/details.component';
 import { CookpitComponent } from './cookpit/cookpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { ServerElementComponent } from './server-element/server-element.componen
     UsernameComponent,
     DetailsComponent,
     CookpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
