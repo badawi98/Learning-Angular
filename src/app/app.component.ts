@@ -6,25 +6,46 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //numbers = [1,2,3,4,5]
-  oddNumbers = [1,3,5]
-  evenNumbers = [2,4]
-  onlyOdd = false;
-  value = 20;
-  serverElements = [{type : 'server' , name : 'TestServer' , content : 'Test Content'}];
-  onServerAdded(ServerData :{serverName : string , serverContnet : string}) {
-    this.serverElements.push({
-      type: 'server',
-      name: ServerData.serverName,
-      content: ServerData.serverContnet
-    });
-  }
+  accounts = [
+    {
+    name : ' Master Account',
+    status : 'active'
+    },
+    {
+      name : 'Badawi',
+      status : 'inactive'
+    },
+    {
+      name : 'Zeinab',
+      status :'unknown'
+    }
+    ];
+    onAccountAdded(newAccount: {name: string, status: string}) {
+      this.accounts.push(newAccount);
+    }
 
-  onBlueprintAdded(blueprintData :{serverName : string , serverContnet : string}) {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: blueprintData.serverName,
-      content: blueprintData.serverContnet
-    });
-  }
+    onStatusChanged(updateInfo: {id: number, newStatus: string}) {
+      this.accounts[updateInfo.id].status = updateInfo.newStatus;
+    }
+  //numbers = [1,2,3,4,5]
+  // oddNumbers = [1,3,5]
+  // evenNumbers = [2,4]
+  // onlyOdd = false;
+  // value = 20;
+  // serverElements = [{type : 'server' , name : 'TestServer' , content : 'Test Content'}];
+  // onServerAdded(ServerData :{serverName : string , serverContnet : string}) {
+  //   this.serverElements.push({
+  //     type: 'server',
+  //     name: ServerData.serverName,
+  //     content: ServerData.serverContnet
+  //   });
+  // }
+
+  // onBlueprintAdded(blueprintData :{serverName : string , serverContnet : string}) {
+  //   this.serverElements.push({
+  //     type: 'blueprint',
+  //     name: blueprintData.serverName,
+  //     content: blueprintData.serverContnet
+  //   });
+  // }
 }

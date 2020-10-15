@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h3> This is my AppCpmonent</h3>
@@ -18,8 +18,8 @@
       <app-details></app-details>
     </div>
   </div>
-</div>
-<div class="container">
+</div> -->
+<!-- <div class="container">
   <app-cookpit
     (serverCreated)="onServerAdded($event)"
     (blueprintCreated)="onBlueprintAdded($event)"></app-cookpit>
@@ -75,7 +75,7 @@
           {{ evenNumber }}
           </li>
         </ng-template> -->
-        <div *appUnless="onlyOdd">
+        <!-- <div *appUnless="onlyOdd">
           <li
           class="list-group-item"
           *ngFor="let evenNumber of evenNumbers"
@@ -85,17 +85,32 @@
           {{ evenNumber }}
           </li>
         </div>
-      </ul>
-      <p appBasicHighlight>This is basic directive style</p>
-      <!-- <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">This is better directive style</p> -->
-      <p  defaultColor="yellow" appBetterHighlight="red">This is better directive style</p>
+      </ul> -->
+      <!-- <p appBasicHighlight>This is basic directive style</p>
+       <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">This is better directive style</p> -->
+      <!-- <p  defaultColor="yellow" appBetterHighlight="red">This is better directive style</p>
       <div [ngSwitch]="value">
         <p *ngSwitchCase="5">Value is 5</p>
         <p *ngSwitchCase="10">Value is 10</p>
         <p *ngSwitchCase="100">Value is 100</p>
         <p *ngSwitchDefault>Value is deafult</p>
-      </div>
+      </div> -->
 
+    <!-- </div> -->
+  <!-- </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+      <hr>
+      <app-account
+        *ngFor="let acc of accounts; let i = index"
+        [account]="acc"
+        [id]="i"
+        (statusChanged)="onStatusChanged($event)"></app-account>
     </div>
   </div>
 </div>
