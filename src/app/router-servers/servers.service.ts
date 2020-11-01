@@ -27,6 +27,7 @@ export class ServersService {
         return s.id === id;
       }
     );
+    alert('Gettning Server' + id)
     return server;
   }
 
