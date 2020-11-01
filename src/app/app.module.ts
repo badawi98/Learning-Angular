@@ -23,24 +23,9 @@ import { NewAccountComponent } from './new-account/new-account.component';
 import { AccountsService } from './accounts-service';
 import { LoggingService } from './logging.service';
 import { HomeComponent } from './home/home.component';
-import { RoutingServersComponent } from './router-servers/servers.component';
-import { EditServerComponent } from './router-servers/edit-server/edit-server.component';
-import { RoutingServerComponent } from './router-servers/server/server.component';
-import { UsersComponent } from './router-users/users.component';
-import { UserComponent } from './router-users/user/user.component';
-import { ServersService } from './router-servers/servers.service';
 
 
-const appRoutes : Routes = [
-  {path : '' , component : HomeComponent},
-  {path : 'users' , component : UsersComponent},
-  {path : 'users/:id/:name' , component : UserComponent},
-  {path : 'servers' , component : RoutingServersComponent},
-  {path : 'servers/:id/edit' , component : EditServerComponent},
-  {path : 'servers/:id/' , component : RoutingServerComponent},
 
-
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,19 +43,15 @@ const appRoutes : Routes = [
     AccountComponent,
     NewAccountComponent,
     HomeComponent,
-    RoutingServersComponent,
-    EditServerComponent,
-    RoutingServerComponent,
-    UsersComponent,
-    UserComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
-    RouterModule.forRoot(appRoutes)
+  //  RouterModule.forRoot(appRoutes)
   ],
-  providers: [AccountsService , LoggingService , ServersService] ,
+  providers: [AccountsService , LoggingService ] ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }
