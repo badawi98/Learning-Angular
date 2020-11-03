@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 
 
@@ -23,7 +22,9 @@ import { NewAccountComponent } from './new-account/new-account.component';
 import { AccountsService } from './accounts-service';
 import { LoggingService } from './logging.service';
 import { HomeComponent } from './home/home.component';
-
+import { UserComponent } from './user/user.component';
+import { HomesComponent } from './homes/homes.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -43,12 +44,15 @@ import { HomeComponent } from './home/home.component';
     AccountComponent,
     NewAccountComponent,
     HomeComponent,
+    UserComponent,
+    HomesComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
+    AppRoutingModule
   //  RouterModule.forRoot(appRoutes)
   ],
   providers: [AccountsService , LoggingService ] ,
